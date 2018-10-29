@@ -14,7 +14,7 @@ def index():
 def tweet():
     try:
         celebrity_name = request.form.get("celebrity")
-        print(celebrity_name)
+        #print(celebrity_name)
     except ValueError:
         return render_template("error.html",error="Please select a celebrity")
 

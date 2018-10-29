@@ -10,10 +10,6 @@ class Blabberbot():
     def make_sentences(self,n):
         return self.text_model.make_short_sentence(n)
 
-textPath = "../Tweets/ElonMusk.txt"
 celebs = {}
 celebs["ElonMusk"] = "../Tweets/ElonMusk.txt"
 celebs["Tesla"] = "../Tweets/Tesla.txt"
-
-engine = Blabberbot(textPath)
-print(engine.make_sentences(140))
