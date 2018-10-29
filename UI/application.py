@@ -1,11 +1,14 @@
+import sys
+sys.path.insert(0, '/home/fevenz/Sriram/Projects/Packages/Blabberbot/BlabberBot/blabberbot/')
 from flask import Flask, session , render_template ,request
-#import blabberbot
+import blabberbot
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html", celebrity = celebrity)
+    print(blabberbot.celebs)
+    return render_template("index.html", celebrities = blabberbot.celebs)
 
 @app.route("/tweet" , methods=["POST"])
 def tweet():
@@ -15,6 +18,7 @@ def tweet():
     except ValueError:
         return render_template("error.html",error="Please select a celebrity")
 
-    #TODO import Markov library enter the celeb and get the tweet
+    engine = blabberbot.Blabberbot(blabberbot.celebs[celebrity_name])
+    tweet = engine.make_sentences(140)
 
     return render_template("tweet.html" , tweet = tweet)

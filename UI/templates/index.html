@@ -8,8 +8,8 @@
     <form action="{{ url_for('tweet')}}" method="post">
         <input list="celebrities" name="celebrity">
         <datalist id="celebrities">
-        {% for book in books %}
-            <option value= "{{ celebrity.name }}">
+        {% for celebrity in celebrities %}
+            <option value= "{{ celebrity.name}}">
         {% endfor %}
         </datalist>
         <input type="submit">
