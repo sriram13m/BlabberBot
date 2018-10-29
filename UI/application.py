@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     print(blabberbot.celebs)
-    return render_template("index.html", celebrities = blabberbot.celebs)
+    return render_template("index.html", celebrities = blabberbot.celebs.keys())
 
 @app.route("/tweet" , methods=["POST"])
 def tweet():
@@ -20,5 +20,6 @@ def tweet():
 
     engine = blabberbot.Blabberbot(blabberbot.celebs[celebrity_name])
     tweet = engine.make_sentences(140)
+    #print(tweet)
 
     return render_template("tweet.html" , tweet = tweet)
