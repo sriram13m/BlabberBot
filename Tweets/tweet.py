@@ -2,7 +2,6 @@
 import time
 import tweepy
 import sys,os
-import credentials
 sys.path.append(os.path.join(os.path.dirname(sys.path[0]), 'blabberbot'))
 import blabberbot
 
