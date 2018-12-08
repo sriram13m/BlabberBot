@@ -14,7 +14,6 @@ def index():
 def tweet():
     try:
         celebrity_name = request.form.get("celebrity")
-        #print(celebrity_name)
     except KeyError:
         return render_template("error.html",error="Please select a celebrity")
 
@@ -22,6 +21,5 @@ def tweet():
         return render_template("error.html",error="Please select a celebrity")
     engine = blabberbot.Blabberbot(blabberbot.celebs[celebrity_name])
     tweet = engine.generate_tweet(140)
-    #print(tweet)
 
     return render_template("tweet.html" , tweet = tweet)
