@@ -9,6 +9,4 @@ class Blabberbot():
     def generate_tweet(self,n):
         return self.text_model.make_short_sentence(n)
 
-celebs = {}
-celebs["ElonMusk"] = "../Tweets/ElonMusk.txt"
-celebs["Tesla"] = "../Tweets/Tesla.txt"
+corpus = "/app/Tweets/final.txt"
