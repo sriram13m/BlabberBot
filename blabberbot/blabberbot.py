@@ -9,4 +9,4 @@ class Blabberbot():
     def generate_tweet(self,n):
         return self.text_model.make_short_sentence(n)
 
-corpus = "/app/Tweets/final.txt"
+corpus = "/home/fevenz/Sriram/Academic/Packages/Blabberbot/BlabberBot/Tweets/final.txt"
