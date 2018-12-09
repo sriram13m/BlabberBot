@@ -7,7 +7,6 @@ import blabberbot
 
 INTERVAL = 60*60*24
 
-"""
 CONSUMER_KEY = os.environ['CONSUMER_KEY']
 CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
 ACCESS_KEY = os.environ['ACCESS_KEY']
@@ -15,7 +14,6 @@ ACCESS_SECRET = os.environ['ACCESS_SECRET']
 auth = tweepy.OAuthHandler(CONSUMER_KEY,CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY,ACCESS_SECRET) 
 api = tweepy.API(auth)
-"""
 
 bot = blabberbot.Blabberbot(blabberbot.corpus)
 
