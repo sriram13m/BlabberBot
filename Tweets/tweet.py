@@ -5,7 +5,7 @@ import sys,os
 sys.path.append(os.path.join(os.path.dirname(sys.path[0]), 'blabberbot'))
 import blabberbot
 
-INTERVAL = 5
+INTERVAL = 60*60*6
 
 CONSUMER_KEY = os.environ['CONSUMER_KEY']
 CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
