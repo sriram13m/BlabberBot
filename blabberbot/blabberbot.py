@@ -25,5 +25,5 @@ class Blabberbot():
     def generate_tweet(self,n):
         return self.text_model.make_short_sentence(n)
 
-sheldon = "/appTweets/sheldonfinal.txt"
+sheldon = "/app/Tweets/sheldonfinal.txt"
 chandler = "/app/Tweets/chandlerfinal.txt"
